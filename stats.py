@@ -18,3 +18,9 @@ def char_count(book_text):
             count[book_text[i].lower()] = 1
         i += 1
     return count
+
+def dic_sort(char_dictionary):
+    dic_list = []
+    for char, num in sorted(char_dictionary.items(), key=lambda char_dictionary: char_dictionary[1], reverse=True):
+        dic_list.append({"char" : char, "num": num})
+    return dic_list
